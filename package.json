@@ -1,7 +1,7 @@
 {
   "name": "navigation-powerups",
-  "displayName": "HTTP File Navigation",
-  "description": "Http file navigation tool",
+  "displayName": "Navigation Power-ups",
+  "description": "Not a big extension, but hey, it keeps you from getting lost in the maze of .http requests. Navigate smarter, not harder :)",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.92.0"
@@ -16,8 +16,8 @@
       "activitybar": [
         {
           "id": "navigation",
-          "title": "Navigation",
-          "icon": "images/list.png"
+          "title": "Navigation Power-ups",
+          "icon": "images/power-up.png"
         }
       ]
     },
@@ -25,7 +25,7 @@
       "navigation": [
         {
           "id": "navigation",
-          "name": "Http File"
+          "name": ""
         }
       ] 
     }

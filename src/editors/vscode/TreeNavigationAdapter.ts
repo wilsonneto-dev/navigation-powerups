@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
-import NavigationNode from '../model/NavigationNode';
-
+import NavigationNode from '../../model/NavigationNode';
+import { navigationCommandName } from "./constants";
 
 export default class TreeNavigationAdapter implements vscode.TreeDataProvider<vscode.TreeItem> {
 	private _onDidChangeTreeData: vscode.EventEmitter<vscode.TreeItem | undefined | null | void> = new vscode.EventEmitter<vscode.TreeItem | undefined | null | void>();
 	public readonly onDidChangeTreeData: vscode.Event<vscode.TreeItem | undefined | null | void> = this._onDidChangeTreeData.event;
 
-	constructor(private navigationRoot: NavigationNode, private onClickCommandName: string) { }
+	constructor(private navigationRoot: NavigationNode) { }
 
 	getTreeItem(element: vscode.TreeItem): vscode.TreeItem {
 		return element;
@@ -29,7 +29,7 @@ export default class TreeNavigationAdapter implements vscode.TreeDataProvider<vs
 			const treeItem = new vscode.TreeItem(node.getName(), node.getChildren().length > 0 ? vscode.TreeItemCollapsibleState.Collapsed : vscode.TreeItemCollapsibleState.None);
 			if(node.getChildren().length === 0) {
 				treeItem.command = {
-					command: this.onClickCommandName,
+					command: navigationCommandName,
 					title: 'Navigate',
 					arguments: [node]
 				};

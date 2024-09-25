@@ -1,4 +1,4 @@
-import NavigationNode from "../NavigationNode";
+import NavigationNode from "../../model/NavigationNode";
 import HttpFileToNavParser from "./HttpFileToNavParser";
 
 const example = `

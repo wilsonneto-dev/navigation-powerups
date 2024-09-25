@@ -1,5 +1,5 @@
-import INavigationParserStrategy from "../INavigationParserStrategy";
-import NavigationNode from "../NavigationNode";
+import INavigationParserStrategy from "../../model/INavigationParserStrategy";
+import NavigationNode from "../../model/NavigationNode";
 
 class HttpFileToNavParser implements INavigationParserStrategy {
     public parse(text: string): NavigationNode {

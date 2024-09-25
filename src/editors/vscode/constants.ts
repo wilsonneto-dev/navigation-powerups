@@ -1,0 +1,1 @@
+export const navigationCommandName = 'navigation-power-ups.navigate';
