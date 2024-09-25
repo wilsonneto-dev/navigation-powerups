@@ -20,8 +20,11 @@ class HttpFileToNavParser implements INavigationParserStrategy {
                 parents.at(-1)!.addChild(header);
                 parents.push(header);
             } else if (this.isRequest(line)) {
-                const request = new NavigationNode(this.getName(line), parents.at(-1)?.getLevel(), lineNumber);
-                parents.at(-1)?.addChild(request);
+                if(this.getName(line).length > 0)
+                {
+                    const request = new NavigationNode(this.getName(line), parents.at(-1)?.getLevel(), lineNumber);
+                    parents.at(-1)?.addChild(request);
+                }
             }
         });
 

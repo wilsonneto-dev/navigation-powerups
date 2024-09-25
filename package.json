@@ -3,6 +3,13 @@
   "displayName": "Navigation Power-ups",
   "description": "Not a big extension, but hey, it keeps you from getting lost in the maze of .http requests. Navigate smarter, not harder :)",
   "version": "1.0.0",
+  "repository": "https://github.com/wilsonneto-dev/navigation-powerups",
+  "publisher": "wilsonneto-dev",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.92.0"
   },

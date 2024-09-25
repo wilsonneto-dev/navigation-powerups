@@ -32,8 +32,10 @@ class VsCodeEditorAdapter implements IEditor {
     }
 
     onFileChangeOrUpdate(callback: () => void): void {
-        vscode.window.onDidChangeActiveTextEditor(_ => callback());
-        vscode.workspace.onDidSaveTextDocument(_ => callback());
+        vscode.window.onDidChangeActiveTextEditor(_ => callback())
+        vscode.window.onDidChangeVisibleTextEditors(_ => callback())
+        vscode.window.onDidChangeTextEditorVisibleRanges(_ => callback())
+        vscode.workspace.onDidSaveTextDocument(_ => callback())
     }
 
     private applyHighlight(range: vscode.Range, editor: vscode.TextEditor) {
