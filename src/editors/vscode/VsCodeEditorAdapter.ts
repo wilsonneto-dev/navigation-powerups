@@ -19,7 +19,6 @@ class VsCodeEditorAdapter implements IEditor {
             navigationViewId,
             new TreeNavigationAdapter(tree)
         );
-        vscode.window.showInformationMessage("oook rc1")
     }
 
     navigateTo(node: NavigationNode): void {
