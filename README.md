@@ -33,7 +33,7 @@ Currently, the extension supports `.http` and `.md` files, feel free to add any 
 
 To be able to see the navigation left menu in markdown files, you just need to open the file and click in the plugin icon in the left bar.
 
-![Markdown file support](image.png)
+![Markdown file support](images/readme-markdown-eg.png)
 
 
 ### HTTP Files
