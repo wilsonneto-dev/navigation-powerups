@@ -1,6 +1,6 @@
 # Navigation Power-ups - VS Code Extension
 
-## Overview
+## Overview  sdfsf
 
 **Navigation Power-ups** is a Visual Studio Code extension that enhances your file navigation experience by adding a left bar navigation tree to files that haven't it natively. The extension is designed to support a variety of file types, offering an easy-to-use interface for jumping between sections, headers, or requests within supported files.
 
