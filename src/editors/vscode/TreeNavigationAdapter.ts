@@ -26,8 +26,13 @@ export default class TreeNavigationAdapter implements vscode.TreeDataProvider<vs
 
 	private convertToTreeItems(nodes: NavigationNode[]): vscode.TreeItem[] {
 		return nodes.map(node => {
-			const treeItem = new vscode.TreeItem(node.getName(), node.getChildren().length > 0 ? vscode.TreeItemCollapsibleState.Collapsed : vscode.TreeItemCollapsibleState.None);
-			if(node.getChildren().length === 0) {
+			var treeItemCollapsibleState = vscode.TreeItemCollapsibleState.None;
+			if(node.getChildren().length > 0)
+				treeItemCollapsibleState = node.getInitialStateAsCollapsed() ? vscode.TreeItemCollapsibleState.Collapsed : vscode.TreeItemCollapsibleState.Expanded;
+
+			const treeItem = new vscode.TreeItem(node.getName(), treeItemCollapsibleState);
+
+			if(node.getChildren().length === 0 || node.getNavigateToLineOnClick()) {
 				treeItem.command = {
 					command: navigationCommandName,
 					title: 'Navigate',
