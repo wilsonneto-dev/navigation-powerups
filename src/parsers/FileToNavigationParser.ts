@@ -2,9 +2,11 @@ import INavigationParserStrategy from "../model/INavigationParserStrategy";
 import HttpFileToNavParser from "./httpfiles/HttpFileToNavParser";
 import { IFile } from "../model/IFile";
 import NavigationNode from "../model/NavigationNode";
+import MarkdownFileToNavParser from "./markdown/MarkdownFileToNavParser";
 
 const navigationParsers : { [extension: string]: INavigationParserStrategy } = {
-    'http': new HttpFileToNavParser()
+    'http': new HttpFileToNavParser(),
+    'md': new MarkdownFileToNavParser()
 };
 
 /**

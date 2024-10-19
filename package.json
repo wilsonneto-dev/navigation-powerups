@@ -1,8 +1,8 @@
 {
   "name": "navigation-powerups",
   "displayName": "Navigation Power-ups",
-  "description": "Not a big extension, but hey, it keeps you from getting lost in the maze of .http requests. Navigate smarter, not harder :)",
-  "version": "1.0.1",
+  "description": "Navigate smarter, not harder :)",
+  "version": "1.1.0",
   "repository": "https://github.com/wilsonneto-dev/navigation-powerups",
   "publisher": "wilsonneto-dev",
   "icon": "images/icon.png",
